@@ -1,22 +1,93 @@
-# Se¤ales a Graficar 
- 
-**Se¤ales a graficar:** 
-- xû(t) = sin(2púfút): Se¤al sinusoidal de frecuencia f (recomendado: f=2) 
-- xý(t) = e(-2t) ú u(t): Se¤al exponencial, donde u(t) es la se¤al escal¢n unitario 
-- xü(t) = tri(t, f): Se¤al triangular peri¢dica de frecuencia f (recomendado: f=2) 
-- x4(t) = sq(t, f): Se¤al cuadrada de frecuencia f (recomendado: f=2) 
- 
-**Dominio de tiempo:** 
-- t ? [-1, 5] s (puede ajustarse seg£n la se¤al) 
- 
-**Gr fica de la se¤al continua:** 
-- Usar numpy.linspace con al menos 1000 puntos para generar t. 
-- Calcular x_cont = x(t) 
-- Graficar x_cont como l¡nea suave 
- 
-**Muestreo y se¤al discreta:** 
-- Definir un periodo de muestreo adecuado, por ejemplo T? = 0.01ÿs 
-- Generar n = np.arange(N) de modo que t? = núT? cubra el mismo intervalo 
-- Calcular x_disc = x(t?) 
-- Superponer los puntos muestreados sobre la gr fica continua 
- 
+"""Graficacion de SeÃ±ales Analogicas y Digitales
+
+## DescripciÃ³n 
+la tarea 1 se basa en generar y visualizar seÃ±ales analogicas y discretas. las 4 seÃ±ales se configuraron con los siguientes parametros: 
+t= np.linspace(-1.0, 5.0, 1000)
+n= np.arange(-40, 201)
+F=2.0
+fs= 40.0 hz 
+ts= 1/fs 
+
+estos parametros se utilizan para generar las siguientes seÃ±ales:
+1. Senoidal:  
+    np.sin(2 * np.pi * F * t)
+    np.sin(2 * np.pi * F * n/fs)
+2. Exponencial: 
+     np.exp(-2 * t) * (t >= 0)
+     np.exp(-2 * n/fs) * (n >= 0) 
+3. Triangular 
+    sawtooth(2 * np.pi * F * t, 0.5)
+    sawtooth(2 * np.pi * F * n/fs, 0.5)
+4. Cuadrada (2 Hz)
+    square(2 * np.pi * F * t)
+    square(2 * np.pi * F * n/fs)
+
+estas muestran cada una de las seÃ±ales una subgrafica una seÃ±al analogica, seÃ±al discreta y seÃ±al discretizada.
+"""
+
+#  ESTRUCTURA DEL PROYECTO 
+"""
+â”œâ”€â”€ main.py               
+â”œâ”€â”€ grapher.py            
+â”‚   â””â”€â”€ graficar_senales() 
+â”œâ”€â”€ Tarea_1.py            
+â”‚   â””â”€â”€ generar_senales()  
+â””â”€â”€ requirements.txt      
+"""
+
+# INSTALACIÃ“N  
+def instalacion():
+    """
+    ## InstalaciÃ³n
+    1. Clonar repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/proyecto-seÃ±ales.git
+    cd proyecto-seÃ±ales
+    ```
+
+    2. (Opcional) Entorno virtual:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/macOS
+    venv\\Scripts\\activate   # Windows
+    ```
+
+    3. Instalar dependencias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    """
+
+#  USO  
+def uso():
+    """
+    ## Uso
+    OpciÃ³n 1 - Ejecutar directamente:
+    ```bash
+    python Tarea_1.py
+    ```
+
+    OpciÃ³n 2 - Usar punto de entrada:
+    ```bash
+    python main.py
+    ```
+
+    ## ParÃ¡metros TÃ©cnicos
+    - Frecuencia base: 2 Hz
+    - Frecuencia muestreo: 40 Hz
+    - Rango temporal: [-1, 5] segundos
+    - Muestras: 241 puntos (n = -40 a 200)
+    """
+
+#  DEPENDENCIAS 
+dependencias = """
+- Python 3.6+
+- NumPy >= 1.21.0
+- SciPy >= 1.7.0
+- Matplotlib >= 3.5.0
+
+Archivo requirements.txt:
+```plaintext
+numpy
+scipy
+matplotlib

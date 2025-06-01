@@ -3,6 +3,8 @@ import numpy as np
 from scipy.signal import square, sawtooth
 from src.utils.grapher import graficar_senales
 
+#definicion de los parametros a utilizat
+
 def generar_senales():
 
     t = np.linspace(-1.0, 5.0, 1000)
@@ -20,7 +22,7 @@ def generar_senales():
     }
 
     for nombre, (xt, xn) in señales.items():
-        graficar_senales(t, xt, n, xn, nombre, fs)  # Pasamos fs a grapher
+        graficar_senales(t, xt, n, xn, nombre, fs)  
 
 if __name__ == "__main__":
     generar_senales()
