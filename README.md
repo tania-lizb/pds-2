@@ -1,4 +1,4 @@
-"""Graficacion de Señales Analogicas y Digitales
+##Graficacion de Señales Analogicas y Digitales
 
 Descripción 
 la tarea 1 se basa en generar y visualizar señales analogicas y discretas. las 4 señales se configuraron con los siguientes parametros: 
@@ -25,7 +25,14 @@ estos parametros se utilizan para generar las siguientes señales:
 estas muestran cada una de las señales una subgrafica una señal analogica, señal discreta y señal discretizada.
 """
 
-ESTRUCTURA DEL PROYECTO 
+##Uso
+
+Opción 1 - Usar punto de entrada para ejecutar la tarea:
+```bash
+python main.py
+```
+
+##Estructura del proyecto
 """
 ├── main.py               
 ├── grapher.py            
@@ -35,54 +42,38 @@ ESTRUCTURA DEL PROYECTO
 └── requirements.txt      
 """
 
-INSTALACIÓN  
-def instalacion():
-    """
-    ## Instalación
-    1. Clonar repositorio:
-    ```bash
-    git clone https://github.com/tu-usuario/proyecto-señales.git
-    cd proyecto-señales
+##Instalacion
+
+1. Clonar repositorio:
+```bash
+git clone https://github.com/tania-lizb/pds-2
+cd pds-2
     ```
 
-    2. (Opcional) Entorno virtual:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/macOS
-    venv\\Scripts\\activate   # Windows
-    ```
+2. (Opcional) Entorno virtual:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\\Scripts\\activate   # Windows
+```
 
-    3. Instalar dependencias:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    """
+3. Instalar dependencias:
+```bash
+pip install -r requirements.txt
+```
 
-USO  
-def uso():
-    """
-    ## Uso
-    Opción 1 - Ejecutar directamente:
-    ```bash
-    python Tarea_1.py
-    ```
 
-    Opción 2 - Usar punto de entrada:
-    ```bash
-    python main.py
-    ```
-
-    ## Parámetros Técnicos
-    - Frecuencia base: 2 Hz
-    - Frecuencia muestreo: 40 Hz
-    - Rango temporal: [-1, 5] segundos
-    - Muestras: 241 puntos (n = -40 a 200)
-    """
-
-DEPENDENCIAS 
+Dependencias
 dependencias = """
 - Python 3.6+
 - NumPy >= 1.21.0
 - SciPy >= 1.7.0
 - Matplotlib >= 3.5.0
 
+Requisitos
+- Python 3.8+
+- Bibliotecas:
+  - numpy
+  - matplotlib
+  - scipy
+Estas bibliotecas están en el archivo requirements.txt
