@@ -32,28 +32,4 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-
-   ## x1_t = np.sin(2 * np.pi * F * t)
-   ## x1_n = np.sin(2 * np.pi * F * n / fs)
-   ## x2_t = np.exp(-2 * t) * (t >= 0)
-   ## x2_n = np.exp(-2 * tn) * (tn >= 0)
-   ## x3_t = sawtooth(2 * np.pi * F * t, width=0.5)
-   ## x3_n = sawtooth(2 * np.pi * F * n / fs, width=0.5)
-   ## x4_t = square(2 * np.pi * F * t)
-   ## x4_n = square(2 * np.pi * F * n / fs) ##
-
-   ## print(f'ts = {ts} segundos')
-
-   ## graficar_senales(t, x1_t, n, x1_n, "Gráfica senoidal")
-   ## graficar_senales(t, x2_t, n, x2_n, "Gráfica exponencial")
-   ## graficar_senales(t, x3_t, n, x3_n, "Gráfica triangular")
-   ## graficar_senales(t, x4_t, n, x4_n, "Gráfica cuadrada")
-
-##if __name__ == "__main__":
-##    graficar_senales() ##
+# 

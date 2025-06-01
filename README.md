@@ -1,6 +1,6 @@
 """Graficacion de Señales Analogicas y Digitales
 
-## Descripción 
+Descripción 
 la tarea 1 se basa en generar y visualizar señales analogicas y discretas. las 4 señales se configuraron con los siguientes parametros: 
 t= np.linspace(-1.0, 5.0, 1000)
 n= np.arange(-40, 201)
@@ -25,7 +25,7 @@ estos parametros se utilizan para generar las siguientes señales:
 estas muestran cada una de las señales una subgrafica una señal analogica, señal discreta y señal discretizada.
 """
 
-#  ESTRUCTURA DEL PROYECTO 
+ESTRUCTURA DEL PROYECTO 
 """
 ├── main.py               
 ├── grapher.py            
@@ -35,7 +35,7 @@ estas muestran cada una de las señales una subgrafica una señal analogica, se�
 └── requirements.txt      
 """
 
-# INSTALACIÓN  
+INSTALACIÓN  
 def instalacion():
     """
     ## Instalación
@@ -58,7 +58,7 @@ def instalacion():
     ```
     """
 
-#  USO  
+USO  
 def uso():
     """
     ## Uso
@@ -79,15 +79,10 @@ def uso():
     - Muestras: 241 puntos (n = -40 a 200)
     """
 
-#  DEPENDENCIAS 
+DEPENDENCIAS 
 dependencias = """
 - Python 3.6+
 - NumPy >= 1.21.0
 - SciPy >= 1.7.0
 - Matplotlib >= 3.5.0
 
-Archivo requirements.txt:
-```plaintext
-numpy
-scipy
-matplotlib
