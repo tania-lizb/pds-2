@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 def graficar_senales(t, xt, n, xn, nombre, fs):
     plt.figure()
     plt.subplots_adjust(hspace=0.65)
-   
 
     plt.subplot(3, 1, 1)
     plt.plot(t, xt, '-b', lw=2)
