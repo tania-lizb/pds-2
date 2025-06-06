@@ -29,3 +29,42 @@ def graficar_senales(t, xt, n, xn, nombre, fs):
     plt.grid()
 
     plt.show()
+
+
+def continuous_plotter(t, señal_modificada, titulo, subtitulo, xlabel, ylabel, señal_referencia=None):
+    plt.figure()
+
+    plt.plot(t, señal_modificada, label=subtitulo, color='blue', linewidth=2)
+
+    if señal_referencia is not None:
+        plt.plot(t, señal_referencia, '--r', lw=1, label="Referencia (A=1, f=1Hz, ϕ=0)")
+    
+    
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(titulo)
+    plt.grid()
+    plt.legend()
+    plt.show()  
+
+
+def discrete_plotter(n, señal_modificada, señal_referencia, título, xlabel, ylabel):
+    plt.figure()
+    plt.stem(n, señal_modificada, label="Señal modificada ", linefmt='b-', markerfmt='bo', basefmt="k-" )
+
+
+    plt.stem(n, señal_referencia, linefmt='r', basefmt='', label="Referencia (A=1, f=1Hz, ϕ=0)")
+  
+
+  
+
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(título)
+    plt.grid()
+    plt.legend()
+    plt.show()
+
+    
