@@ -1,91 +1,76 @@
-"""
-## GRAFICACION DE SEÑALES ANALOGAS Y DISCRETAS
+# PDS tareas 1 a 4 
 
-## Descripción
-La Tarea 1 genera y visualiza señales analógicas y discretas con los parámetros:
-t = np.linspace(-1.0, 5.0, 1000)
-n = np.arange(-40, 201)
-F = 2.0  # Hz
-fs = 40.0  # Hz
-ts = 1/fs
-estas muestran cada una de las señales una subgrafica una señal analogica, señal discreta y señal discretizada.
-"""
 
-# ============== Señales implementadas ==============
-def mostrar_senales():
-    """
-    Señales implementadas:
-    1. Senoidal:
-       Analógica: np.sin(2 * np.pi * F * t)
-       Discreta: np.sin(2 * np.pi * F * n/fs)
-    
-    2. Exponencial:
-       Analógica: np.exp(-2 * t) * (t >= 0)
-       Discreta: np.exp(-2 * n/fs) * (n >= 0)
-    
-    3. Triangular:
-       Analógica: sawtooth(2 * np.pi * F * t, 0.5)
-       Discreta: sawtooth(2 * np.pi * F * n/fs, 0.5)
-    
-    4. Cuadrada (2 Hz):
-       Analógica: square(2 * np.pi * F * t)
-       Discreta: square(2 * np.pi * F * n/fs)
-    """
+### **Tarea_1: Generación de Señales Básicas**
 
-# ============== Estructura del proyecto ==============
-estructura = """
-├── main.py  
-├── src/  
-│   ├── utils/  
-│   │   └── grapher.py  
-│   └── tarea1.py
-└── requirements.txt
-"""
+Genera 4 tipos de señales (sinusoidal, exponencial, triangular, cuadrada) en versión **analógica** y **discreta**, mostrando su relación.
 
-# ============== Requisitos ==============
-requisitos = """
-- Python 3.8+
-- Bibliotecas:
-  - numpy
-  - matplotlib
-  - scipy
-Requisitos en requirements.txt
-"""
+* **Ecuaciones utilizadas**:
+  - Sinusoidal: $x(t) = \sin(2\pi F t)$
+  - Exponencial: $x(t) = e^{-2t} \cdot u(t)$
+  - Triangular: $\text{sawtooth}(2\pi F t, \text{width}=0.5)$
+  - Cuadrada: $\text{square}(2\pi F t)$
 
-# ============== Instalación ==============
-def instalacion():
-    """
-    1. Clonar repositorio:
-    ```bash
-    git clone https://github.com/tania-lizb/pds-2
-    cd pds-2
-    ```
+* **Parámetros**:
+  - Frecuencia (F): 2 Hz
+  - Tiempo analógico: -1.0 a 5.0 s (1000 muestras)
+  - Muestreo discreto: $f_s = 40$ Hz, $n = -40$ a $200$
 
-    2. (Opcional) Entorno virtual:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/macOS
-    venv\\Scripts\\activate  # Windows
-    ```
+* **Para ejecutar**:
+```bash
+python main.py Tarea_1
 
-    3. Instalar dependencias:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    """
 
-# ============== Uso ==============
-def uso():
-    """
-    Ejecutar la Tarea 1:
-    ```bash
-    python main.py
-    ```
+### **Tarea_2: Señal senoidal continua** 
 
-    Genera gráficas de:
-    1. Sinusoidal: x₁(t) = sin(2πft)
-    2. Exponencial: x₂(t) = e^(–2t)·u(t)
-    3. Triangular: x₃(t) = tri(t,f)
-    4. Cuadrada: x₄(t) = sq(t,f)
-    """
+Genera una señal senoidal continua ajustable por frecuencia.
+
+* **Ecuaciones utilizadas**:
+   - x(t) = A \cdot \sin(2\pi f t)
+
+* **Parámetros**:
+  - Frecuencia (F): 1, 2, 5 hz (introducida por el usuario)
+  - Tiempo: -1.0 a 5.0 s (1000 muestras)
+
+* **Para ejecutar**:
+```bash
+python main.py Tarea_2 <frecuencia>
+ejemplo 
+python main.py Tarea_2 2.5
+
+
+
+### **Tarea_3: **
+
+Compara dos señales sinusoides con parametros personalizados 
+
+* **Ecuaciones utilizadas**:
+  - continua: x(t) = A \cdot \sin(2\pi f t + \phi)
+  - discreta: x[n] = A \cdot \sin(2\pi f n T_s + \phi)
+
+* **Parámetros**:
+  - ts=0.01 s
+  - Tiempo: 0 a 5.0 s (1000 muestras)
+  - Muestreo discreto: n= -50, 250
+
+* **Para ejecutar**:
+```bash
+python main.py Tarea_3 <amplitud> <frecuencia> <fase_en_radianes>
+ejemplo 
+python main.py Tarea_3 1.5 2 0.785
+
+### **Tarea_4: simulacion DAC**
+
+simula un convertidor digital-analogico de N bits calculando resolucion y tamaño del paso 
+
+* **Parámetros**:
+  - Niveles :  2^N
+  - Paso: VFS/(2^N - 1)
+  - Resolucion: 100 / (2^N - 1) %
+
+* **Para ejecutar**:
+```bash
+python main.py Tarea_4 <bits>
+ejemplo
+python main.py Tarea_4 8
 

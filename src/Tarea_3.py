@@ -28,10 +28,3 @@ def senales_con_potter(A,f,ϕ):
     "Amplitud"
 )
 
-#if __name__ == "__main__":
- #   import sys
-  #  if len(sys.argv) != 4:
-   #     print("Uso: python main.py tarea_3 <amplitud> <frecuencia> <fase>")
-    #    sys.exit(1)
-    #A, f, ϕ = map(float, sys.argv[1:4])
-    #senales_con_potter(A,f,ϕ)
