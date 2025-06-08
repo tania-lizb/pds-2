@@ -56,10 +56,6 @@ def discrete_plotter(n, señal_modificada, señal_referencia, título, xlabel, y
 
     plt.stem(n, señal_referencia, linefmt='r', basefmt='', label="Referencia (A=1, f=1Hz, ϕ=0)")
   
-
-  
-
-
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.title(título)

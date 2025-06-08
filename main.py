@@ -2,6 +2,7 @@ import sys
 from src.Tarea_1 import generar_senales
 from src.Tarea_2 import Tarea_2
 from src.Tarea_3 import senales_con_potter
+from src.Tarea_4 import DAC  
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -22,5 +23,11 @@ if __name__ == "__main__":
             senales_con_potter(A, f, phi)
         else:
             print("Uso: python main.py Tarea_3 <amplitud> <frecuencia> <fase>")
+    elif sys.argv[1]== "Tarea_4":
+        if len(sys.argv) >= 3: 
+            bits = int(sys.argv[2])
+            DAC(bits)
+        else:
+            print("Uso: python main.py Tarea_4 <bits>")
     else:
         print(f"Tarea desconocida: {sys.argv[1]}")
