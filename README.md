@@ -17,8 +17,9 @@ Genera 4 tipos de señales (sinusoidal, exponencial, triangular, cuadrada) en ve
   - Muestreo discreto: $f_s = 40$ Hz, $n = -40$ a $200$
 
 * **Para ejecutar**:
-```bash
-python main.py Tarea_1
+   ```bash
+   python main.py Tarea_1
+
 
 
 ### **Tarea_2: Señal senoidal continua** 
@@ -33,10 +34,10 @@ Genera una señal senoidal continua ajustable por frecuencia.
   - Tiempo: -1.0 a 5.0 s (1000 muestras)
 
 * **Para ejecutar**:
-```bash
-python main.py Tarea_2 <frecuencia>
-ejemplo 
-python main.py Tarea_2 2.5
+   ```bash
+   python main.py Tarea_2 <frecuencia>
+   ejemplo 
+   python main.py Tarea_2 2.5
 
 
 
@@ -54,10 +55,10 @@ Compara dos señales sinusoides con parametros personalizados
   - Muestreo discreto: n= -50, 250
 
 * **Para ejecutar**:
-```bash
-python main.py Tarea_3 <amplitud> <frecuencia> <fase_en_radianes>
-ejemplo 
-python main.py Tarea_3 1.5 2 0.785
+   ```bash
+   python main.py Tarea_3 <amplitud> <frecuencia> <fase_en_radianes>
+   ejemplo 
+   python main.py Tarea_3 1.5 2 0.785
 
 ### **Tarea_4: simulacion DAC**
 
@@ -69,8 +70,8 @@ simula un convertidor digital-analogico de N bits calculando resolucion y tamañ
   - Resolucion: 100 / (2^N - 1) %
 
 * **Para ejecutar**:
-```bash
-python main.py Tarea_4 <bits>
-ejemplo
-python main.py Tarea_4 8
+   ```bash
+   python main.py Tarea_4 <bits>
+   ejemplo
+   python main.py Tarea_4 8
 
