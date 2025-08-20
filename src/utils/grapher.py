@@ -63,4 +63,53 @@ def discrete_plotter(n, señal_modificada, señal_referencia, título, xlabel, y
     plt.legend()
     plt.show()
 
+##Examen_p1
+
+
+def analisis_espectro_frec(tiempo, señal, frecuencias, magnitudes, titulo_senal, titulo_espectro, xlim=None):
+    """Grafica señal en el tiempo y su espectro de frecuencias"""
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 6))
     
+    # Señal en el tiempo
+    ax1.plot(tiempo, señal, 'b-', linewidth=2)
+    ax1.set_xlabel('Tiempo (s)')
+    ax1.set_ylabel('Amplitud')
+    ax1.set_title(titulo_senal)
+    ax1.grid(True)
+
+    # Espectro de frecuencia
+    ax2.plot(frecuencias, magnitudes, 'r-', linewidth=2)
+    ax2.set_xlabel('Frecuencia (Hz)')
+    ax2.set_ylabel('Magnitud')
+    ax2.set_title(titulo_espectro)
+    ax2.grid(True)
+    if xlim is not None:
+        ax2.set_xlim(0, xlim)
+
+    plt.tight_layout()
+    plt.show()
+
+
+def imprimir_en_consolaPT1(delta_f, N, fs, picos):
+    print("Analisis Espectral Parte 1 Transformada Discreta de Fourier")
+    print(f"Resolución en frecuencia Δf: {delta_f:.4f} Hz")
+    print(f"Número de muestras: {N}")
+    print(f"Frecuencia de muestreo fs: {fs} Hz")
+    print("\nPicos espectrales encontrados:")
+    for i, (freq, mag) in enumerate(picos[:5], 1):
+        print(f"  Pico {i}: {freq:.4f} Hz - Amplitud: {mag:.6f}")
+
+
+def imprimir_en_consolaPT2(delta_f, N, fs, frecuencia_ruido, amplitud_ruido, picos_limpia, picos_con_ruido):
+    print("Analisis Espectral con Ruido Parte 2 Transformada Discreta de Fourier")
+    print(f"Resolución en frecuencia Δf: {delta_f:.4f} Hz")
+    print(f"Número de muestras: {N}")
+    print(f"Frecuencia de muestreo fs: {fs} Hz")
+    print(f"Frecuencia de ruido añadido: {frecuencia_ruido} Hz")
+    print(f"Amplitud de ruido: {amplitud_ruido}")
+    print("\nPicos en señal limpia:")
+    for i, (freq, mag) in enumerate(picos_limpia[:5], 1):
+        print(f"  Pico {i}: {freq:.2f} Hz - Amplitud: {mag:.6f}")
+    print("\nPicos en señal con ruido:")
+    for i, (freq, mag) in enumerate(picos_con_ruido[:5], 1):
+        print(f"  Pico {i}: {freq:.2f} Hz - Amplitud: {mag:.6f}")
